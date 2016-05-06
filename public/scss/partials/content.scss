@@ -8,6 +8,9 @@
     @media screen and (max-width: 767px){
         padding: $length-small;
     }
+    @media screen and (max-width: 480px){
+        text-align: center;
+    }
     .content-item-wrapper {
         border: 1px solid $silver-dark;
         padding-bottom: 26px;
