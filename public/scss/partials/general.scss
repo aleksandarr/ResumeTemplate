@@ -18,6 +18,10 @@ h2 {
 .container {
     margin-top: $length-large;
     margin-bottom: $length-large;
+    @media screen and (max-width: 480px){
+        margin-top:0;
+        margin-bottom: 0;
+  }
 }
 .container-fluid {
     @media screen and (max-width: 480px){
