@@ -19,11 +19,18 @@ h2 {
     margin-top: $length-large;
     margin-bottom: $length-large;
 }
+.container-fluid {
+    @media screen and (max-width: 480px){
+        padding-left: 0;
+        padding-right: 0;
+  }
+}
 .main-container {
   display: flex;
   box-shadow: 3px 3px 3px $silver-dark;
   @media screen and (max-width: 767px){
     display: block;
+    box-shadow: none;
   }
 }
 ul {
