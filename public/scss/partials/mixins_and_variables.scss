@@ -1,0 +1,15 @@
+/* =========================================
+            VARIABLES - NOT #CoLoRs
+========================================= */
+
+$length-small: 20px;
+$length-medium: 40px;
+$length-large: 60px;
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}

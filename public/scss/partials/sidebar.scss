@@ -1,0 +1,52 @@
+/* =========================================
+            SIDEBAR
+========================================= */
+
+.sidebar {
+    background-color: $blue;
+    color: $white;
+    padding: $length-medium;
+    @media screen and (max-width: 767px){
+            text-align: center;
+            padding: $length-small;
+        }
+    h1 {
+        font-weight: 400;
+        margin: 0;
+        font-size: 36px;
+        line-height: 30px;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        margin-bottom: $length-small;
+        max-width: 242px;
+        @media screen and (max-width: 767px){
+            margin-top: $length-small;
+        }
+    }
+    ul {
+        &:nth-child(1) {
+            margin-bottom: 50px;
+        }
+        li {
+            font-weight: 300;
+            span{
+                &:nth-child(2){
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+            }
+        }
+        .person-summary {
+            font-style: italic;
+        }
+    }
+    .contact-info {
+        margin-top: $length-medium;
+        @media screen and (max-width: 767px){
+            margin-top: $length-small;
+        }
+    }
+}

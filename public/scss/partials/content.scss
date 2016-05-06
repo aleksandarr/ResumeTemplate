@@ -1,0 +1,47 @@
+/* =========================================
+            CONTENT
+========================================= */
+
+.content-wrapper {
+    background-color: $white;
+    padding: $length-medium;
+    @media screen and (max-width: 767px){
+        padding: $length-small;
+    }
+    .content-item-wrapper {
+        border: 1px solid $silver-dark;
+        padding-bottom: 26px;
+        margin-bottom: $length-medium;
+        @media screen and (max-width: 767px){
+            margin-bottom: $length-small;
+        }
+        h2 {
+            text-transform: uppercase;
+            margin: 20px 10px 20px 0;
+            @media screen and (max-width: 767px){
+                margin: 5px;
+            }
+            span {
+                display: inline-block;
+                margin: 10px 10px 10px 15px;
+            }
+        }
+        p {
+            font-size: 18px;
+        }
+        .summary {
+            margin-top: $length-small;
+            line-height: 22px;
+        }
+    }
+    .languages-interests-wrapper {
+        padding: $length-small;
+        @media screen and (max-width:767px) {
+            padding: 10px 0;
+        }
+        .icon {
+            display: inline-block;
+            margin-right: 8px;
+        }
+    }
+}

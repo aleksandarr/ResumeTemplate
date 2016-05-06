@@ -1,0 +1,51 @@
+/* =========================================
+            MODAL
+========================================= */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $blue;
+    text-align: center;
+    transition: opacity 0.2s ease-out;
+    opacity: 0; 
+    height: 0;
+    overflow: hidden;
+}
+.modal-body {
+    position: relative;
+    background-color: white;
+    max-width: 550px;
+    height: auto;
+    margin: 10% auto;
+    #modal-content {
+        padding: $length-small;
+        p {
+            padding: $length-small;
+        }
+    }
+}
+.active {
+    opacity: 1;
+    height: auto;
+    transition: opacity 0.2s ease-in;
+}
+.modal{
+    .close-wrapper {
+        right: 0;
+        top: 5px;
+        position: absolute;
+        padding: $length-small;
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $blue;
+        }
+    }
+}
+.open-modal {
+    color: $black;
+}

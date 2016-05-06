@@ -1,0 +1,40 @@
+/* =========================================
+            GENERAL STYLES
+========================================= */
+
+body {
+    font-family: 'Hind', sans-serif;
+    background-color: $silver;
+}
+* {
+    box-sizing: border-box;
+}
+p, h2 {
+    margin: 0;
+}
+h2 {
+    font-weight: 400;
+}
+.container {
+    margin-top: $length-large;
+    margin-bottom: $length-large;
+}
+.main-container {
+  display: flex;
+  box-shadow: 3px 3px 3px $silver-dark;
+  @media screen and (max-width: 767px){
+    display: block;
+  }
+}
+ul {
+    padding-left: 0;
+}
+li {
+    list-style-type: none;
+}
+.blue-light {
+    color: $blue-light;
+}
+.bold {
+    font-weight: 600;
+}

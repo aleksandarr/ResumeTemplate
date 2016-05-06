@@ -1,0 +1,19 @@
+/* =========================================
+            PARTIALS
+========================================= */
+
+
+/* External Styles */
+
+@import "../../node_modules/normalize.scss/normalize";
+@import "../../node_modules/bootstrap-grid/grid";
+@import "../icomoon/style";
+
+/* Internal Styles */ 
+
+@import "partials/colors.scss";
+@import "partials/mixins_and_variables.scss";
+@import "partials/general.scss";
+@import "partials/sidebar.scss";
+@import "partials/content.scss";
+@import "partials/modal.scss";
