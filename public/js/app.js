@@ -1,22 +1,6 @@
     
-
-     Handlebars.getTemplate = function(name) {
-        if (Handlebars.templates === undefined || Handlebars.templates[name] === undefined) {
-            $.ajax({
-                url : 'js/Handlebars-templates/' + name + '.handlebars',
-                success : function(data) {
-                    if (Handlebars.templates === undefined) {
-                        Handlebars.templates = {};
-                    }
-                    Handlebars.templates[name] = Handlebars.compile(data);
-                },
-                async : false
-            });
-        }
-        return Handlebars.templates[name];
-    };
-
-    var template = Handlebars.getTemplate("resume");
+    var source = $('#resume-template').html();
+    var template = Handlebars.compile(source);
 
     $.getJSON('resume.json', function(data) {
 

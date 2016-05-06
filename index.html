@@ -12,8 +12,100 @@
     <body>
         <div class="container-fluid">
             <div class="container">
+                <script id="resume-template" type="text/x-handlebars-template">
+                    <div class="row main-container">
+                        <div class="col-md-3 sidebar">
+                            {{#basics}}
+                                <a href="#" class="open-modal modal-summary" data-title="About Me" data-text="{{summary}}"><img src="{{picture}}" alt="person image"></a>
+                                <h1>{{name}}</h1>
+                                <p>{{label}}</p>
+                                <ul class="contact-info">
+                                    <li><span class="icon-envelop"></span><span>{{email}}</span></li>
+                                    <li><span class="icon-mobile"></span><span>{{phone}}</span></li>
+                                    <li><span class="icon-display"></span><span>{{website}}</span></li>
+                                </ul>
+                                {{#location}}
+                                    <ul>
+                                       <li><span class="icon-location"></span><span>{{address}}, {{postalCode}}</span></li>
+                                       <li>{{city}}, {{countryCode}}, {{region}}</li>
+                                   </ul>
+                                {{/location}}
+                            {{/basics}}
+                        </div>
+                        <div class="col-md-9 content-wrapper">
+                            {{#work}}
+                            <div class="col-md-12 content-item-wrapper">
+                                <h2><a href="#" class="open-modal work-highlights" data-title="Work Highlights" data-text="{{highlights}}"><span class="icon-briefcase"></span></a>Experience</h2>
+                                <div class="col-md-6">
+                                    <p>{{position}}</p>
+                                    <p class="blue-light">{{startDate}} - {{endDate}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{company}}</p>
+                                    <p class="blue-light">{{website}}</p>
+                                </div>
+                                <div class="col-md-12 summary">
+                                    <p>{{summary}}</p>
+                                </div>
+                            </div>
+                            {{/work}}
+                            {{#volunteer}}
+                            <div class="col-md-12 content-item-wrapper">
+                                <h2><a href="#" class="open-modal volunteer-highlights" data-title="Volunteering Highlights" data-text="{{highlights}}"><span class="icon-users"></span></a>Volunteer</h2>
+                                <div class="col-md-6">
+                                <p>{{position}}</p>
+                                <p class="blue-light">{{startDate}} - {{endDate}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{organization}}</p>
+                                    <p class="blue-light">{{website}}</p>
+                                </div>
+                                <div class="col-md-12 summary">
+                                    <p>{{summary}}</p>
+                                </div>
+                            </div>
+                            {{/volunteer}}
+                            {{#education}}
+                            <div class="col-md-12 content-item-wrapper">
+                              <h2><span class="icon-library"></span>Education</h2>
+                                <div class="col-md-6">
+                                    <p>{{studyType}}</p>
+                                    <p class="blue-light">{{startDate}} - {{endDate}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{institution}} // {{area}}</p>
+                                    <p>GPA: {{gpa}}</p>
+                                    <p>{{courses}}</p>
+                                </div>
+                            </div>
+                            {{/education}}
+                            {{#skills}}
+                            <div class="col-md-12 content-item-wrapper">
+                            <h2><span class="icon-stats-bars2"></span>Skills</h2>
+                                <div class="col-md-12">
+                                    <p>{{name}} // {{level}} // {{keywords}}</p>
+                                </div>
+                            </div>
+                            {{/skills}}
+                            {{#languages}}
+                            <div class="col-md-12 content-item-wrapper languages-interests-wrapper">
+                                <div class="col-md-12">
+                                <span class="icon icon-earth"></span><span class="bold">Languages:</span>
+                                    {{name}} // {{level}}
+                                </div>
+                            {{/languages}}
+                            {{#interests}}
+                            <div class="col-md-12">
+                            <span class="bold"><span class="icon icon-accessibility"></span>Interests:</span>
+                                {{name}}, {{keywords}}
+                            </div>
+                            {{/interests}}
+                        </div>
+                    </div>
+                </script>
             </div>
         </div>
+        </script>
         <div id="modal" class="modal">
             <div class="modal-body">
                 <div class="close-wrapper">
